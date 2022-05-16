@@ -2,7 +2,7 @@ import { AppDataSource } from "../../data-source";
 import { User } from "../../entities/user.entity";
 
 const userDeleteSelfService = async (email: string) => {
-  const userRepository = AppDataSource.getMongoRepository(User);
+  const userRepository = AppDataSource.getRepository(User);
 
   const users = await userRepository.find();
 
